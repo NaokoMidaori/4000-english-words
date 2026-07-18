@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4000 English Words</title>
+</head>
+<body>
+
+<h1>4000 Essential English Words</h1>
+<p>Xush kelibsiz!</p>
+
+<button onclick="showWord()">Tasodifiy so'z</button>
+
+<h2 id="word"></h2>
+
+<script>
+const words = [
+  {en:"afraid", uz:"qo'rqqan"},
+  {en:"agree", uz:"rozi bo'lmoq"},
+  {en:"angry", uz:"jahli chiqqan"},
+  {en:"arrive", uz:"yetib kelmoq"},
+  {en:"attack", uz:"hujum qilmoq"}
+];
+
+function showWord(){
+  let w = words[Math.floor(Math.random()*words.length)];
+  document.getElementById("word").innerHTML =
+    w.en + " — " + w.uz;
+}
+</script>
+
+</body>
+</html>
